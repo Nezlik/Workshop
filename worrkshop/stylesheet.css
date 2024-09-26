@@ -1,0 +1,332 @@
+*{
+    background-color: white;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    padding:50px;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    box-sizing: border-box;
+    height: 7vh;
+    position:fixed;
+    z-index:100000000;
+}
+.navbar a{
+    color:black;
+    text-decoration: none;
+}
+.navbar .navlink ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar .navlink ul li{
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar li{
+     display:inline-block;
+     white-space: nowrap;
+     font-size:13px;
+     font-weight: 600;
+}
+
+.submenu {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;  /* Aligner juste en dessous du parent */
+    left: 0;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index:500000;
+    opacity: 0; /* Initialement invisible */
+    visibility: hidden; /* Cacher pour ne pas rendre cliquable */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition pour l'apparition douce */
+}
+
+.submenu li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+.submenu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Afficher le sous-menu lors du survol (nouveau style) */
+.menu-item:hover .submenu {
+
+    opacity: 1; /* Le sous-menu devient visible progressivement */
+    visibility: visible; /* Le rendre cliquable */
+}
+
+.void{
+    height:14vh;
+    width: 100%;
+}
+.bandeau{
+    position:relative;
+    padding-top:130px;
+    padding-bottom:130px;
+    background-color:#154924;
+    background-image: url("learnCode.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.bandeau2{
+    position:relative;
+    padding-top:130px;
+    padding-bottom:130px;
+    background-color:#361549;
+    background-image: url("learnCode.svg");
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.grey{
+    width:100%;
+    background-color:rgb(240, 240, 240);
+    padding: 30px;
+}
+.white{
+    width:100%;
+    padding: 30px;
+}
+
+.fixedContainer{
+    position: relative;
+    margin:auto;
+    background-color: transparent;
+    max-width: 1140px;
+}
+
+.titreBandeau{
+    position: relative;
+    font-weight: bold;
+    margin-left:45px;
+    color:white;
+    font-size:50px;
+    background-color: transparent;
+}
+.cheminBandeau{
+    position:absolute;
+    top:150px;
+    font-size:12px;
+    font-weight: normal;
+    background-color: transparent;
+    color:white;
+}
+
+.three{
+    display: flex;
+    justify-content: space-between;
+}
+.map, .lien, .titre, .TitreRestau, .description, .description b, .titreBox, .titreBox2, .regimeBox, .regimeBox b, .contentBox, .flexBox, .flexBoxA, .flexBoxABtn, .flexBoxABtn a, .flexBoxADescription, .flexBoxATitre, .descBox, .prixBox, .prixBox b, .quantiteVarieBox, .regimeBox, .consulteBox, .RdvBox, .ContactBdeBox, .RdvBox b, .btnBdeBox, .btnBdeBox2, .btnBdeBox2 a, .btnBdeBox a{
+    background-color: inherit;
+}
+
+.map{
+    width:50%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.titre{
+    color:#00147d;
+    font-size:40px;
+    font-weight: bold;
+    width:30vw;
+}
+
+.description{
+    font-size:13px;
+    width:30vw;
+}
+
+.contentBox{
+    max-width: 1140px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexBoxA{ 
+    max-width: 285px;
+    margin-bottom: 40px;
+    white-space: normal;
+}
+
+.flexBoxABtn{
+    margin-top: 10px;
+    text-align: right;
+
+}
+
+.flexBoxABtn a{
+    text-decoration: none;
+    color:black;
+}
+
+.flexBoxATitre{ 
+    font-size: 20px;
+    font-weight: bold;
+    color: #b9b500;
+    margin-bottom: 10px;
+}
+
+.flexBoxADescription{ 
+    font-size:13;
+}
+
+.titre{
+    margin:5px;
+}
+
+.description{
+    margin:5px;
+}
+
+.titreBox{
+    font-size:40px;
+    color:#00147d;
+    font-weight: bold;
+    width:30vw;
+    margin-bottom:30px;
+}
+
+.titreBox2{
+    font-size:40px;
+    color:#64007d;
+    font-weight: bold;
+    width:30vw;
+    margin-bottom:30px;
+}
+
+.descBox{
+    margin-bottom:10px;
+}
+
+.prixBox{
+    margin-bottom: 20px;
+    text-align: right;
+    margin-right:40px;
+}
+
+.quantiteVarieBox{
+    margin-bottom:10px;
+}
+
+
+.regimeBox{
+    margin-bottom:10px;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: lightgray;
+}
+
+td {
+    background-color: white;
+}
+
+td:first-child {
+    background-color: lightyellow;
+    font-weight: bold;
+}
+
+.consulteBox{
+    margin-bottom: 20px;
+}
+
+.RdvBox{
+    margin-bottom: 10px;
+}
+
+.btnBdeBox a{
+    margin-top:20px;
+    text-align: center;
+    font-weight: bold;
+    font-size:16px;
+    text-decoration: none;
+}
+
+.btnBdeBox2 a{
+    margin-top:20px;
+    text-align: center;
+    font-weight: bold;
+    font-size:16px;
+    text-decoration: none;
+    color:purple;
+}
+
+.btnBdeBox{
+    text-align: right;
+}
+
+.btnBdeBox2{
+    text-align: right;
+    ;
+}
+
+.video{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+video{
+    margin-top:15px;
+    border : 1px solid black;
+    border-radius: 10px;
+}
+
+.TitreRestau{
+    text-align: left;
+    margin: 5px;
+    width: 30vw;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.img{
+    margin-right:400px;
+}
